@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Soporte Técnico</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+ <body>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12">Cabecera	
+		</div>
+		
+	</div>
+	<div class="row">	  	
+	  	<div class="col-md-2"><ul class="nav">
+      <li><a href="/intranet/modulo_soporte/paginas/formularios/soporte.php">Solicitar Soporte</a></li>
+      <li><a onclick="actualizarCola();">Reporte de Solicitudes</a></li>
+	  <li><a href="/intranet/modulo_soporte/paginas/formularios/consulta.php">Consultas</a></li>      
+      <li><a href="/intranet/intranet3pte/index.php">Volver a Intranet</a></li>
+    </ul></div>	  	
+	  	<div class="col-md-10"><form name="soporte" method="post" action="" id="Form">
+<table width="380" border="0" class="tabla">
+  <tr>
+    <td width="14" class="tdta">&nbsp;</td>
+    <td width="14" class="tdta">&nbsp;</td>
+    <td width="14" class="tdta">&nbsp;</td>
+    <td width="14" class="tdta">&nbsp;</td>
+    <td width="14" class="tdta">&nbsp;</td>
+    <td width="276" align="right" class="Negrita4">Cuenta:
+      <input name="textfield" type="text" id="cuenta" size="35" /></td>
+    <input name="equipo" id="equipo" size="50" value="<?php echo trim($equipo);?>" />    
+    <input name="registrado"  id="registrado" size="50" value="<?php echo $registrado;?>" />
+  </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td align="right" valign="middle"><input name="button3" onclick="autenticar();" type="button" class="botones" id="button3" value="Enviar" />
+      <input name="button4" onclick=";" type="button" class="btnreporte" id="button4" value="Cancelar" /></td>
+  </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta" align="center" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta" align="center" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta" align="center" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta" align="center" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta" align="center" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta" align="center" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta">&nbsp;</td>
+    <td class="tdta" align="center" valign="middle">&nbsp;</td>
+    </tr>
+  </table>
+</form></div>
+	  </div>
+	</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
